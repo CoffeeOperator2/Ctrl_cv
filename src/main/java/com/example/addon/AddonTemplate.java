@@ -42,6 +42,8 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new PearlEscape());
         Modules.get().add(new MioPhase());
         Modules.get().add(new FastWeb());
+        Modules.get().add(new FeetPlace());
+        Modules.get().add(new SpeedMine());
         // Commands
         Commands.add(new CommandExample());
 
