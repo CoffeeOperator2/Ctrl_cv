@@ -30,14 +30,11 @@ public class AddonTemplate extends MeteorAddon {
         // Modules
         // Fixed: Safely registers your new fixed HoleSnap module instance instead of the dead template holder
         Modules.get().add(new HoleSnap());
-        Modules.get().add(new ThunderhackSpeedMine());
-        Modules.get().add(new ThunderhackBreaker());
         Modules.get().add(new FastLatency());
         Modules.get().add(new SydneyAspectRatio());
         Modules.get().add(new TickShift());
         Modules.get().add(new WebPhase());
         Modules.get().add(new FOVModifier());
-        Modules.get().add(new TotemPopCounter());
         Modules.get().add(new ViewModel());
         Modules.get().add(new NoRotate());
         Modules.get().add(new PearlEscape());

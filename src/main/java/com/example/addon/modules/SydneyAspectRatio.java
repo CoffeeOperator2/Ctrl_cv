@@ -22,7 +22,6 @@ public class SydneyAspectRatio extends Module {
         super(AddonTemplate.CATEGORY, "aspect-ratio", "Modifies the game's global visual rendering aspect ratio layout matrix.");
     }
 
-    // 🌟 THE OVERCLOCK: Instead of an empty tick pass, we override the standard window aspect ratio tracker
     public float getCustomAspectRatio() {
         if (!isActive() || mc.getWindow() == null) {
             return mc.getWindow() != null ? (float) mc.getWindow().getWidth() / (float) mc.getWindow().getHeight() : 1.78f;
