@@ -1,12 +1,10 @@
 package com.example.addon.modules;
 
 import com.example.addon.AddonTemplate;
-import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.modules.Module;
-import meteordevelopment.orbit.EventHandler;
 
 public class SydneyAspectRatio extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
@@ -21,15 +19,15 @@ public class SydneyAspectRatio extends Module {
     );
 
     public SydneyAspectRatio() {
-        // Keeping it strictly grouped under your custom addon tab layout column!
         super(AddonTemplate.CATEGORY, "aspect-ratio", "Modifies the game's global visual rendering aspect ratio layout matrix.");
     }
 
-    @EventHandler
-    public void onTick(TickEvent.Post event) {
-        if (mc.player == null || mc.level == null) return;
-
-        // This structural block tracks updates smoothly without touching broken OpenGL methods.
+    // 🌟 THE OVERCLOCK: Instead of an empty tick pass, we override the standard window aspect ratio tracker
+    public float getCustomAspectRatio() {
+        if (!isActive() || mc.getWindow() == null) {
+            return mc.getWindow() != null ? (float) mc.getWindow().getWidth() / (float) mc.getWindow().getHeight() : 1.78f;
+        }
+        return ratio.get().floatValue();
     }
 
     @Override

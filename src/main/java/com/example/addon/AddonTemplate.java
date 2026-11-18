@@ -13,7 +13,9 @@ import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import meteordevelopment.meteorclient.systems.modules.player.NoRotate;
 import org.slf4j.Logger;
-
+import com.example.addon.modules.LadderAntiPhase;
+import com.example.addon.modules.SpeedMinev1;
+import com.example.addon.modules.AutoMine;
 public class AddonTemplate extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
 
@@ -34,7 +36,6 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new SydneyAspectRatio());
         Modules.get().add(new TickShift());
         Modules.get().add(new WebPhase());
-        Modules.get().add(new THMAutoTrap());
         Modules.get().add(new FOVModifier());
         Modules.get().add(new TotemPopCounter());
         Modules.get().add(new ViewModel());
@@ -42,11 +43,23 @@ public class AddonTemplate extends MeteorAddon {
         Modules.get().add(new PearlEscape());
         Modules.get().add(new MioPhase());
         Modules.get().add(new FastWeb());
+        Modules.get().add(new HorseFly());
+        Modules.get().add(new LadderAntiPhase());
+        Modules.get().add(new MainHand());// Commands
+        Modules.get().add(new SpeedMinev1());
+        Modules.get().add(new AutoMine());
         Modules.get().add(new FeetPlace());
-        Modules.get().add(new SpeedMine());
-        // Commands
+        Modules.get().add(new NetworkProtector());
+        Modules.get().add(new SwordGap());
+        Modules.get().add(new PistonCrystal());
+        Modules.get().add(new HolePush());
+        Modules.get().add(new HeadBomber());
+        Modules.get().add(new LadderAntiPhase());
+        Modules.get().add(new GlobalColor());
+        Modules.get().add(new KillSay());
+        Modules.get().add(new Blocker());
+        Modules.get().add(new AutoCrystal());
         Commands.add(new CommandExample());
-
         // HUD
         Hud.get().register(HudExample.INFO);
     }
